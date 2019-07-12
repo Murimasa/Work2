@@ -1,0 +1,64 @@
+package shinigamihideo;
+
+public class Triangle extends Shape {
+	private Point pa;
+	private Point pb;
+	private Point pc;
+	
+
+	public Triangle() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	double calculatePerimetr() {
+		double a=this.side(pa,pb);
+		double b=this.side(pb,pc);
+		double c=this.side(pc,pa);
+		return a + b + c;
+
+	}
+
+	@Override
+	double calculateArea() {
+		double a=this.side(pa,pb);
+		double b=this.side(pb,pc);
+		double c=this.side(pc,pa);
+		double polP = (a + b + c) / 2;
+		return Math.sqrt(polP * (polP - a) * (polP - b) * (polP - c));
+
+	}
+
+	public Triangle(Point pa, Point pb, Point pc) {
+		super();
+		this.pa = pa;
+		this.pb = pb;
+		this.pc = pc;
+	}
+
+	public Point getPa() {
+		return pa;
+	}
+
+	public void setPa(Point pa) {
+		this.pa = pa;
+	}
+
+	public Point getPb() {
+		return pb;
+	}
+
+	public void setPb(Point pb) {
+		this.pb = pb;
+	}
+
+	public Point getPc() {
+		return pc;
+	}
+
+	public void setPc(Point pc) {
+		this.pc = pc;
+	}
+
+	
+}
