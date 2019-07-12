@@ -1,0 +1,69 @@
+package shinigamihideo;
+
+public class Rectangle extends Shape {
+	private Point pa;
+	private Point pb;
+	private Point pc;
+	private Point pd;
+
+	public Rectangle(Point pa, Point pb, Point pc, Point pd) {
+		super();
+		this.pa = pa;
+		this.pb = pb;
+		this.pc = pc;
+		this.pd = pd;
+	}
+
+	public Rectangle() {
+		super();
+	}
+
+	public Point getPa() {
+		return pa;
+	}
+
+	public void setPa(Point pa) {
+		this.pa = pa;
+	}
+
+	public Point getPb() {
+		return pb;
+	}
+
+	public void setPb(Point pb) {
+		this.pb = pb;
+	}
+
+	public Point getPc() {
+		return pc;
+	}
+
+	public void setPc(Point pc) {
+		this.pc = pc;
+	}
+
+	public Point getPd() {
+		return pd;
+	}
+
+	public void setPd(Point pd) {
+		this.pd = pd;
+	}
+	@Override
+	double calculatePerimetr() {
+		double a = this.side(pa, pb);
+		double b = this.side(pb, pc);
+		double c = this.side(pc, pd);
+		double d = this.side(pd, pa);
+		return a + b + c + d;
+
+	}
+	@Override
+	double calculateArea(){
+		double a = this.side(pa, pb);
+		double b = this.side(pb, pc);
+
+		return a * b;
+
+	}
+}
