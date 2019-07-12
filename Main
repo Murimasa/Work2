@@ -1,0 +1,21 @@
+package shinigamihideo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Triangle tr = new Triangle(new Point(0, 0), new Point(3, 3), new Point(6, 0));
+		Square sq = new Square(new Point(0, 0), new Point(0, 3), new Point(3, 3), new Point(3, 0));
+		Rectangle rc = new Rectangle(new Point(0, 0), new Point(0, 5), new Point(10, 5), new Point(10, 0));
+		System.out.println("Area of Triangle = " + tr.calculateArea());
+		System.out.println("Perimetr of Triangle = " + tr.calculatePerimetr());
+		System.out.println();
+
+		System.out.println("Area of Square = " + sq.calculateArea());
+		System.out.println("Perimetr of Square = " + sq.calculatePerimetr());
+		System.out.println();
+
+		System.out.println("Area of Rectangle = " + rc.calculateArea());
+		System.out.println("Perimetr of Rectangle = " + rc.calculatePerimetr());
+	}
+
+}
