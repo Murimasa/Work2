@@ -1,0 +1,73 @@
+package shinigamihideo;
+
+public class Square extends Shape {
+	private Point pa;
+	private Point pb;
+	private Point pc;
+	private Point pd;
+
+	public Square() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Square(Point pa, Point pb, Point pc, Point pd) {
+		super();
+		this.pa = pa;
+		this.pb = pb;
+		this.pc = pc;
+		this.pd = pd;
+	}
+
+	public Point getPa() {
+		return pa;
+	}
+
+	public void setPa(Point pa) {
+		this.pa = pa;
+	}
+
+	public Point getPb() {
+		return pb;
+	}
+
+	public void setPb(Point pb) {
+		this.pb = pb;
+	}
+
+	public Point getPc() {
+		return pc;
+	}
+
+	public void setPc(Point pc) {
+		this.pc = pc;
+	}
+
+	public Point getPd() {
+		return pd;
+	}
+
+	public void setPd(Point pd) {
+		this.pd = pd;
+	}
+
+	double calculatePerimetr() {
+		double a = this.side(pa, pb);
+
+		return a * 4;
+
+	}
+
+	@Override
+	public double side(Point a, Point b) {
+		// TODO Auto-generated method stub
+		return super.side(a, b);
+	}
+	@Override
+	double calculateArea() {
+		double a = this.side(pa, pb);
+
+		return a * a;
+
+	}
+}
